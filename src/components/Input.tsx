@@ -1,16 +1,14 @@
-import { Controller, UseFormReturn } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import { TextField, Box } from "@mui/material";
 
 interface Props {
-  methods: UseFormReturn;
   name: string;
+  placeHolder?: string;
   type: React.HTMLInputTypeAttribute;
-  watchName: string;
 }
 
-export default function Input({ methods, name, type, watchName }: Props) {
-  const { control, watch } = methods;
-  const watchedValue = watch(watchName);
+export default function Input({ name, type, placeHolder }: Props) {
+  const { control } = useFormContext();
 
   return (
     <Box>
@@ -19,12 +17,11 @@ export default function Input({ methods, name, type, watchName }: Props) {
         name={name}
         render={({ field, fieldState: { error } }) => (
           <TextField
-            variant="filled"
+            variant="outlined"
             {...field}
             error={!!error}
             type={type}
-            value={watchedValue}
-            placeholder={name}
+            placeholder={placeHolder}
             sx={{
               ":hover": {
                 cursor: "pointer",

@@ -4,9 +4,9 @@ const rooms = [
     capacity: 2,
     data: "دو تخته رو به دریا",
     inputs: [
-      { name: "name", type: "text" },
-      { name: "lastName", type: "text" },
       { name: "na_code", type: "number" },
+      { name: "lastName", type: "text" },
+      { name: "name", type: "text" },
     ],
   },
   {
@@ -14,9 +14,9 @@ const rooms = [
     capacity: 4,
     data: "چهار تخته",
     inputs: [
-      { name: "name", type: "text" },
-      { name: "lastName", type: "text" },
       { name: "na_code", type: "number" },
+      { name: "lastName", type: "text" },
+      { name: "name", type: "text" },
     ],
   },
   {
@@ -24,9 +24,9 @@ const rooms = [
     capacity: 3,
     data: "سه تخته",
     inputs: [
-      { name: "name", type: "text" },
-      { name: "lastName", type: "text" },
       { name: "na_code", type: "number" },
+      { name: "lastName", type: "text" },
+      { name: "name", type: "text" },
     ],
   },
 ];
